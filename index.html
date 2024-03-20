@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>mermaid.initialize({ startOnLoad: true });</script>
+</head>
+<body>
+  <div class="mermaid">
+    graph TD;
+    A[Start] --> B[Connect with Metamask];
+    B --> C[Send MartinB to Bridge Contract];
+    C --> D{Verified?};
+    D -->|No| E[End: Verification Failed];
+    D -->|Yes| F[Provide CashTokens Address];
+    F --> G[Send Equivalent MartinB CashTokens];
+    G --> H[End: Process Completed];
+  </div>
+</body>
+</html>
